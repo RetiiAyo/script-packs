@@ -1,9 +1,3 @@
-_G.scriptPacks = {}; _G.scriptPacks.settings = {
-	skipGameLoading = false, -- self explaining. (default: false)
-	delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
-	genreToLoad = "pvp" -- genres: pvp (more coming soon)
-};
-
 print("loading.. (0/4)");
 if _G.scriptPacks == nil then return print("_G.scriptPacks is missing."); end;
 if _G.scriptPacks.settings == nil then return print("_G.scriptPacks.settings is missing.") end;
