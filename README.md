@@ -4,4 +4,8 @@ open-source script packs - load just one string, will load specialised for a gen
 # how to use?
 paste this into your executor
 
-`e`
+`_G.scriptPacks = {}; _G.scriptPacks.settings = {
+	skipGameLoading = false, -- self explaining. (default: false)
+	delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
+	genreToLoad = "pvp" -- genres: pvp (more coming soon)
+};`
