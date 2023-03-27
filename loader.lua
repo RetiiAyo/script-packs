@@ -1,9 +1,8 @@
 print("loading.. (0/4)");
 if _G.scriptPacks == nil then return print("_G.scriptPacks is missing."); end;
-if _G.scriptPacks.settings == nil then return print("_G.scriptPacks.settings is missing.") end;
-if _G.scriptPacks.settings.skipGameLoading == nil then return print("_G.scriptPacks.settings.skipGameLoading is missing.") end;
-if _G.scriptPacks.settings.delayBetweenExecutingScripts == nil then return print("_G.scriptPacks.settings.delayBetweenExecutingScripts is missing.") end;
-if _G.scriptPacks.settings.genreToLoad == nil then return print("_G.scriptPacks.settings.genreToLoad is missing.") end;
+if _G.scriptPacks.skipGameLoading == nil then return print("_G.scriptPacks.skipGameLoading is missing.") end;
+if _G.scriptPacks.delayBetweenExecutingScripts == nil then return print("_G.scriptPacks.delayBetweenExecutingScripts is missing.") end;
+if _G.scriptPacks.genreToLoad == nil then return print("_G.scriptPacks.genreToLoad is missing.") end;
 print("_G.scriptPacks initialised! (1/4)");
 print("_G.scriptPacks.settings initialised! (2/4)");
 repeat task.wait() until game:IsLoaded() or _G.scriptPacks.settings.skipGameLoading == true;
