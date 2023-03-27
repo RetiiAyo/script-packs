@@ -8,4 +8,4 @@ paste this into your executor
 	skipGameLoading = false, -- self explaining. (default: false)
 	delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
 	genreToLoad = "pvp" -- genres: pvp (more coming soon)
-};```
+};
