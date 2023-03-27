@@ -12,13 +12,13 @@ local genres = {
 	pvp = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genres/pvp.lua"))();
 };
 
-if not genres[_G.scriptPacks.settings.genreToLoad] then
+if not genres[_G.scriptPacks.genreToLoad] then
 	return print("selected genre doesn't exist.");
 else
-	for i, v in pairs(genres[_G.scriptPacks.settings.genreToLoad]) do
+	for i, v in pairs(genres[_G.scriptPacks.genreToLoad]) do
 		loadstring(game:HttpGet(v))();
 		print("script loaded!");
-		wait(_g.scriptPacks.settings.delayBetweenExecutingScripts);
+		wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
 end;
 print("everything was successfully executed! (4/4)");
