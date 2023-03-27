@@ -10,4 +10,8 @@ _G.scriptPacks = {}; _G.scriptPacks.settings = {
 	delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
 	genreToLoad = "pvp" -- genres: pvp (more coming soon)
 };
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/loader.lua"))()
 ```
+
+you can configure the _G.scriptPacks.settings however you want, change the delay, genre and skip loading. have fun!
