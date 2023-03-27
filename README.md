@@ -1,4 +1,4 @@
-# script-packs
+# script-packs v1.7
 open-source script packs - load just one string, will load specialised for a genre scripts. by me. free.
 
 # how to use?
