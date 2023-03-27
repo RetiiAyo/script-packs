@@ -15,10 +15,11 @@ local genres = {
 if not genres[_G.scriptPacks.genreToLoad] then
 	return print("selected genre doesn't exist.");
 else
+	print("genre exists, trying to load scripts")
 	for i, v in pairs(genres[_G.scriptPacks.genreToLoad]) do
 		loadstring(game:HttpGet(v))();
 		print("script loaded!");
-		wait(_G.scriptPacks.delayBetweenExecutingScripts);
+		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
 end;
 print("everything was successfully executed! (4/4)");
