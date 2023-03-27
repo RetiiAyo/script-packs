@@ -9,7 +9,7 @@ repeat task.wait() until game:IsLoaded() or _G.scriptPacks.settings.skipGameLoad
 print("game loaded (3/4)");
 
 local genres = {
-	pvp = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genres/pvp.lua"));
+	pvp = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genres/pvp.lua"))();
 };
 
 if not genres[_G.scriptPacks.settings.genreToLoad] then
