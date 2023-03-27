@@ -3,4 +3,5 @@ open-source script packs - load just one string, will load specialised for a gen
 
 # how to use?
 paste this into your executor
-``` e ```
+
+`e`
