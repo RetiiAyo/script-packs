@@ -8,9 +8,7 @@ print("_G.scriptPacks.settings initialised! (2/4)");
 repeat task.wait() until game:IsLoaded() or _G.scriptPacks.settings.skipGameLoading == true;
 print("game loaded (3/4)");
 
-local genres = {
-	pvp = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genres/pvp.lua"))();
-};
+local genres = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genre-json.lua"))();
 
 if not genres[_G.scriptPacks.genreToLoad] then
 	return print("selected genre doesn't exist.");
