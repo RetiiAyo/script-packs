@@ -1,6 +1,4 @@
-# script-packs v1.7
-
-# SCRIPT IS DISABLED FOR NOW, COME BACK SOON
+# script-packs v1.8
 
 open-source script packs - load just one string, will load specialised for a genre scripts. by me. free.
 
