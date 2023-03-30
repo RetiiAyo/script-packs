@@ -1,3 +1,4 @@
+if _G.scriptPacksAlreadyExecutedInOneGame == 1 then return print("script-packs were already executed in one game! rejoin to use script-packs again.") end 
 print("loading.. (0/4)");
 if _G.scriptPacks == nil then return print("_G.scriptPacks is missing."); end;
 if _G.scriptPacks.skipGameLoading == nil then return print("_G.scriptPacks.skipGameLoading is missing.") end;
@@ -19,5 +20,6 @@ else
 		print("script loaded!");
 		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
+	_G.scriptPacksAlreadyExecutedInOneGame = 1
 end;
 print("everything was successfully executed! (4/4)");
