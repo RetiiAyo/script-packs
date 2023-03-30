@@ -11,7 +11,15 @@ print("game loaded (3/4)");
 
 local genres = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genre-json.lua"))();
 
-if not genres[_G.scriptPacks.genreToLoad] then
+if _G.scriptPacks.genreToLoad == "custom" and _G.scriptPacks.customScripts ~= nil then
+	print("custom genre selected, trying to load scripts")
+	for i, v in pairs(_G.scriptPacks.customScripts) do
+		loadstring(game:HttpGet(v))();
+		print("custom script loaded!")
+		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
+	end;
+else
+	if not genres[_G.scriptPacks.genreToLoad] then
 	return print("selected genre doesn't exist.");
 else
 	print("genre exists, trying to load scripts")
@@ -21,5 +29,6 @@ else
 		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
 	_G.scriptPacksAlreadyExecutedInOneGame = 1
+    end;
 end;
 print("everything was successfully executed! (4/4)");
