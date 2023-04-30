@@ -28,6 +28,8 @@ print("_G.scriptPacks.settings initialised! (2/4)");
 repeat task.wait() until game:IsLoaded() or _G.scriptPacks.settings.skipGameLoading == true;
 print("game loaded (3/4)");
 
+ScriptPacksCore:Destroy()
+
 local genres = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genre-json.lua"))();
 
 if _G.scriptPacks.genreToLoad == "custom" and _G.scriptPacks.customScripts ~= nil then
