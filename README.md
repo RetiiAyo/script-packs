@@ -15,6 +15,18 @@ _G.scriptPacks = {
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/loader.lua"))()
 ```
 
+or paste this if you want custom scripts (NEW IN 1.8b)
+```lua
+_G.scriptPacks = {
+    skipGameLoading = false, -- self explaining. (default: false)
+    delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
+    genreToLoad = "custom", -- nothing to change if custom
+    customScripts = {} -- add your custom script links
+};
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/loader.lua"))()
+```
+
 you can configure the _G.scriptPacks.settings however you want, change the delay, genre and skip loading. have fun!
 
 # update log
