@@ -19,6 +19,11 @@ you can configure the _G.scriptPacks.settings however you want, change the delay
 
 # update log
 
+1.8b (30.04.2023):
+```
+- added a text label when loading script-packs
+```
+
 1.8 (30.03.2023):
 ```
 - added 'universal' genre for every game
