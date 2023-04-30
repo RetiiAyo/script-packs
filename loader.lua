@@ -17,39 +17,41 @@ textlabel.TextColor3 = Color3.new(1, 1, 1)
 textlabel.Position = UDim2.new(0, 0, 0, -36)
 textlabel.Parent = ScriptPacksCore
 
-if _G.scriptPacksAlreadyExecutedInOneGame == 1 then return textlabel.Text = "script-packs was already executed in this session!" end 
 textlabel.Text = "loading.. (0/4)"
 if _G.scriptPacks == nil then return textlabel.Text = "_G.scriptPacks is missing!" end;
 if _G.scriptPacks.skipGameLoading == nil then return textlabel.Text = "_G.scriptPacks.skipGameLoading is missing!" end;
-if _G.scriptPacks.delayBetweenExecutingScripts == nil then return print("_G.scriptPacks.delayBetweenExecutingScripts is missing.") end;
-if _G.scriptPacks.genreToLoad == nil then return print("_G.scriptPacks.genreToLoad is missing.") end;
-print("_G.scriptPacks initialised! (1/4)");
-print("_G.scriptPacks.settings initialised! (2/4)");
-repeat task.wait() until game:IsLoaded() or _G.scriptPacks.settings.skipGameLoading == true;
-print("game loaded (3/4)");
+if _G.scriptPacks.delayBetweenExecutingScripts == nil then return textlabel.Text = "_G.scriptPacks.delayBetweenExecutingScripts is missing!" end;
+if _G.scriptPacks.genreToLoad == nil then return textlabel.Text = "_G.scriptPacks.genreToLoad is missing!" end;
 
-ScriptPacksCore:Destroy()
+if _G.scriptPacksAlreadyExecutedInOneGame == 1 then return textlabel.Text = "script-packs was already executed in this session!" end 
+
+textlabel.Text = "_G.scriptPacks initialised! (1/4)"
+textlabel.Text = "_G.scriptPacks.settings initialised! (2/4)"
+repeat task.wait() until game:IsLoaded() or _G.scriptPacks.settings.skipGameLoading == true;
+textlabel.Text = "game loaded (3/4)"
 
 local genres = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/genre-json.lua"))();
 
 if _G.scriptPacks.genreToLoad == "custom" and _G.scriptPacks.customScripts ~= nil then
-	print("custom genre selected, trying to load scripts")
+	textlabel.Text = "custom genre selected, trying to load scripts"
 	for i, v in pairs(_G.scriptPacks.customScripts) do
 		loadstring(game:HttpGet(v))();
-		print("custom script loaded!")
+		textlabel.Text = "custom script loaded!"
 		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
 else
 	if not genres[_G.scriptPacks.genreToLoad] then
-	return print("selected genre doesn't exist.");
+	textlabel.Text = "selected genre doesn't exist."
 else
-	print("genre exists, trying to load scripts")
+	textlabel.Text = "genre exists, trying to load scripts"
 	for i, v in pairs(genres[_G.scriptPacks.genreToLoad]) do
 		loadstring(game:HttpGet(v))();
-		print("script loaded!");
+		textlabel.Text = "script loaded!"
 		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
 	_G.scriptPacksAlreadyExecutedInOneGame = 1
     end;
 end;
-print("everything was successfully executed! (4/4)");
+textlabel.Text = "everything was successfully executed! (4/4)"
+task.wait(3)
+ScriptPacksCore:Destroy()
