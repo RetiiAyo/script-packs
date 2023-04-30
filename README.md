@@ -5,7 +5,7 @@ open-source script packs - load just one string, will load specialised for a gen
 # how to use?
 paste this into your executor
 
-```
+```lua
 _G.scriptPacks = {
 	skipGameLoading = false, -- self explaining. (default: false)
 	delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
