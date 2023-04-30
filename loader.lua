@@ -1,3 +1,5 @@
+task.wait(1)
+
 local ScriptPacksCore = Instance.new("ScreenGui")
 ScriptPacksCore.Name = "ScriptPacksCore"
 ScriptPacksCore.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
