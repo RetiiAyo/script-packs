@@ -22,6 +22,7 @@ you can configure the _G.scriptPacks.settings however you want, change the delay
 1.8b (30.04.2023):
 ```
 - added a text label when loading script-packs
+- added custom scripts support (you can add infinitely scripts)
 ```
 
 1.8 (30.03.2023):
