@@ -1,7 +1,26 @@
-if _G.scriptPacksAlreadyExecutedInOneGame == 1 then return print("script-packs were already executed in one game! rejoin to use script-packs again.") end 
-print("loading.. (0/4)");
-if _G.scriptPacks == nil then return print("_G.scriptPacks is missing."); end;
-if _G.scriptPacks.skipGameLoading == nil then return print("_G.scriptPacks.skipGameLoading is missing.") end;
+local ScriptPacksCore = Instance.new("ScreenGui")
+ScriptPacksCore.Name = "ScriptPacksCore"
+ScriptPacksCore.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScriptPacksCore.ResetOnSpawn = false
+
+syn.protect_gui(ScriptPacksCore)
+ScriptPacksCore.Parent = game:GetService("CoreGui")
+
+local textlabel = Instance.new("TextLabel")
+textlabel.Size = UDim2.new(1, 0, 0, 36)
+textlabel.Text = "Loading.."
+textlabel.BackgroundTransparency = 1
+textlabel.TextStrokeTransparency = 0
+textlabel.TextSize = 30
+textlabel.Font = Enum.Font.SourceSans
+textlabel.TextColor3 = Color3.new(1, 1, 1)
+textlabel.Position = UDim2.new(0, 0, 0, -36)
+textlabel.Parent = ScriptPacksCore
+
+if _G.scriptPacksAlreadyExecutedInOneGame == 1 then return textlabel.Text = "script-packs was already executed in this session!" end 
+textlabel.Text = "loading.. (0/4)"
+if _G.scriptPacks == nil then return textlabel.Text = "_G.scriptPacks is missing!" end;
+if _G.scriptPacks.skipGameLoading == nil then return textlabel.Text = "_G.scriptPacks.skipGameLoading is missing!" end;
 if _G.scriptPacks.delayBetweenExecutingScripts == nil then return print("_G.scriptPacks.delayBetweenExecutingScripts is missing.") end;
 if _G.scriptPacks.genreToLoad == nil then return print("_G.scriptPacks.genreToLoad is missing.") end;
 print("_G.scriptPacks initialised! (1/4)");
