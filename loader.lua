@@ -18,12 +18,12 @@ textlabel.Position = UDim2.new(0, 0, 0, -36)
 textlabel.Parent = ScriptPacksCore
 
 textlabel.Text = "loading.. (0/4)"
-if _G.scriptPacks == nil then return textlabel.Text = "_G.scriptPacks is missing!" end;
-if _G.scriptPacks.skipGameLoading == nil then return textlabel.Text = "_G.scriptPacks.skipGameLoading is missing!" end;
-if _G.scriptPacks.delayBetweenExecutingScripts == nil then return textlabel.Text = "_G.scriptPacks.delayBetweenExecutingScripts is missing!" end;
-if _G.scriptPacks.genreToLoad == nil then return textlabel.Text = "_G.scriptPacks.genreToLoad is missing!" end;
+if _G.scriptPacks == nil then textlabel.Text = "_G.scriptPacks is missing!" return end
+if _G.scriptPacks.skipGameLoading == nil then textlabel.Text = "_G.scriptPacks.skipGameLoading is missing!" return end;
+if _G.scriptPacks.delayBetweenExecutingScripts == nil then textlabel.Text = "_G.scriptPacks.delayBetweenExecutingScripts is missing!" return end;
+if _G.scriptPacks.genreToLoad == nil then textlabel.Text = "_G.scriptPacks.genreToLoad is missing!" return end;
 
-if _G.scriptPacksAlreadyExecutedInOneGame == 1 then return textlabel.Text = "script-packs was already executed in this session!" end 
+if _G.scriptPacksAlreadyExecutedInOneGame == 1 then textlabel.Text = "script-packs was already executed in this session!" return end 
 
 textlabel.Text = "_G.scriptPacks initialised! (1/4)"
 textlabel.Text = "_G.scriptPacks.settings initialised! (2/4)"
