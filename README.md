@@ -29,6 +29,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs
 
 you can configure the _G.scriptPacks.settings however you want, change the delay, genre and skip loading. have fun!
 
+# genres
+
+### custom - Allows user to add any scripts in their liking.
+### pvp - Loads customised scripts specially made for this genre.
+
 # update log
 
 1.9 (04.05.2023):
