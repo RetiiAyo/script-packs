@@ -31,6 +31,11 @@ you can configure the _G.scriptPacks.settings however you want, change the delay
 
 # update log
 
+1.9 (04.05.2023):
+```
+- Removed syn.protect_gui. Synapse X doesn't exist and the script will error.
+```
+
 1.8b (30.04.2023):
 ```
 - added a text label when loading script-packs
