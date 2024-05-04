@@ -5,7 +5,7 @@ ScriptPacksCore.Name = "ScriptPacksCore"
 ScriptPacksCore.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ScriptPacksCore.ResetOnSpawn = false
 
-syn.protect_gui(ScriptPacksCore)
+--syn.protect_gui(ScriptPacksCore)
 ScriptPacksCore.Parent = game:GetService("CoreGui")
 
 local textlabel = Instance.new("TextLabel")
