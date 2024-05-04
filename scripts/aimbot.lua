@@ -1,5 +1,5 @@
 local teamCheck = false
-local fov = 150
+local fov = 350
 local smoothing = 1
 
 local RunService = game:GetService("RunService")
