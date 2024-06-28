@@ -1,4 +1,4 @@
-# script-packs v1.9
+# script-packs v2.0
 
 open-source script packs - load just one string, will load specialised for a genre scripts. by me. free.
 
@@ -9,7 +9,7 @@ paste this into your executor
 _G.scriptPacks = {
 	skipGameLoading = false, -- self explaining. (default: false)
 	delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
-	genreToLoad = "pvp" -- genres: pvp, universal (more coming soon)
+	genreToLoad = "pvp" -- genres: pvp, universal, mm2 (more coming soon)
 };
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/loader.lua"))()
@@ -33,8 +33,14 @@ you can configure the _G.scriptPacks.settings however you want, change the delay
 
 ### custom - Allows user to add any scripts in their liking.
 ### pvp - Loads customised scripts specially made for this genre.
+### mm2 - Loads custmosied scripts made for Murder Mystery 2.
 
 # update log
+
+2.0 (04.05.2023):
+```
+- Added mm2 genre
+```
 
 1.9 (04.05.2023):
 ```
