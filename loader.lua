@@ -38,7 +38,7 @@ if _G.scriptPacks.genreToLoad == "custom" and _G.scriptPacks.customScripts ~= ni
 	textlabel.Text = "custom genre selected, trying to load scripts"
 	for i, v in pairs(_G.scriptPacks.customScripts) do
 		loadstring(game:HttpGet(v))();
-		textlabel.Text = "custom script loaded!"
+		textlabel.Text = "custom script loaded! ("..i.."/"..#_G.scriptPacks.customScripts..")"
 		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
 else
@@ -48,7 +48,7 @@ else
 	textlabel.Text = "genre exists, trying to load scripts"
 	for i, v in pairs(genres[_G.scriptPacks.genreToLoad]) do
 		loadstring(game:HttpGet(v))();
-		textlabel.Text = "script loaded!"
+		textlabel.Text = "script loaded! ("..i.."/"..#genres[_G.scriptPacks.genreToLoad]..")"
 		task.wait(_G.scriptPacks.delayBetweenExecutingScripts);
 	end;
 	_G.scriptPacksAlreadyExecutedInOneGame = 1
