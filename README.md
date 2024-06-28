@@ -9,7 +9,7 @@ paste this into your executor
 _G.scriptPacks = {
 	skipGameLoading = false, -- self explaining. (default: false)
 	delayBetweenExecutingScripts = 1, -- self explaining. (default: 1)
-	genreToLoad = "pvp" -- genres: pvp, universal, mm2 (more coming soon)
+	genreToLoad = "pvp" -- genres: pvp, universal, mmtwo (more coming soon)
 };
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RetiiAyo/script-packs/main/loader.lua"))()
